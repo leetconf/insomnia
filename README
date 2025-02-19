@@ -1,13 +1,11 @@
 Insomnia logger
 ===============
 
-Insomnia is a simple WebSocket-based app that listens for "MESSAGE_CREATE" events from Discord's API. Whenever a new message is received, the message details gets logged into a file called "messages.log". Simple as that.
+Insomnia is a simple WebSocket-based app that listens for "MESSAGE_CREATE" events from Discord's API. Whenever a new message is received, the message details gets logged into a file called "messages.log". Simple as that. Configuration is done through environment variables. These are the variables you need to define before runtime:
 
-Configuration are done through environment variables. These are the environment variables you need to define before runtime:
-
-export INSOMNIA_TOKEN=""
-export INSOMNIA_USER_AGENT=""
-export INSOMNIA_BROWSER=""
-export INSOMNIA_OS=""
+export INSOMNIA_TOKEN = ""
+export INSOMNIA_USER_AGENT = ""
+export INSOMNIA_BROWSER = ""
+export INSOMNIA_OS = ""
 
 You can make this a systemd service in a Linux machine that runs 24/7 as long as the machine is up.
