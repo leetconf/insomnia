@@ -13,9 +13,9 @@ class Client:
 
     def on_message(self, ws, message):
         data: dict = json.loads(message)
-        code = data.get("op") # Status code
-        event_name = data.get("t") # Event name
-        event_data = data.get("d") # Event data (JSON)
+        code = data.get("op")
+        event_name = data.get("t")
+        event_data = data.get("d") # JSON
 
         if code == 10:
             self.heartbeat_interval = event_data['heartbeat_interval'] / 1000
